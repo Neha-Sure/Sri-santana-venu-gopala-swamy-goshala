@@ -16,12 +16,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Noto Sans Telugu', sans-serif; /* Applied Telugu Font */
+            font-family: 'Noto Sans Telugu', sans-serif;
         }
 
         body {
             background-color: #FAF6EE;
             color: #333;
+            overflow-x: hidden;
         }
 
         /* 1. Red Header Banner */
@@ -87,20 +88,22 @@
             white-space: nowrap;
         }
 
-      .hero-section {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                url('image.jpg') center top / cover no-repeat;
-    height: 120vh; /* ఎత్తుని 120% స్క్రీన్ ఎత్తుకు పెంచాం */
-    min-height: 900px; /* డెస్క్‌టాప్‌లో కూడా ఫోటో ఫుల్‌గా కనిపించడానికి */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 20px;
-}
+        /* 3. Main Hero Banner Section */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                        url('image.jpg') center top / cover no-repeat;
+            height: 120vh;
+            min-height: 900px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
         .hero-title {
             font-size: 38px;
             color: #FFFFFF;
@@ -178,16 +181,6 @@
             gap: 20px;
         }
 
-        @media (max-width: 900px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .navbar { flex-direction: column; padding: 10px; }
-            .nav-links { flex-wrap: wrap; justify-content: center; }
-        }
-
-        @media (max-width: 600px) {
-            .services-grid { grid-template-columns: 1fr; }
-        }
-
         .service-card {
             background-color: #FAF6EE;
             border: 1px solid #E5C384;
@@ -226,6 +219,80 @@
             font-size: 14px;
             color: #555;
             line-height: 1.5;
+        }
+
+        /* =========================================================
+           📱 MOBILE & TABLET RESPONSIVE STYLES (ప్రత్యేకంగా మొబైల్ కోసం)
+        ========================================================= */
+        @media (max-width: 768px) {
+            /* 1. Header adjustment */
+            .top-header h1 {
+                font-size: 15px;
+            }
+
+            /* 2. Menu links layout for Mobile */
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+                gap: 8px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links li a {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .donate-nav-btn {
+                font-size: 13px;
+                padding: 6px 14px;
+            }
+
+            /* 3. Hero Section Height & Text for Mobile */
+            .hero-section {
+                height: 100vh;
+                min-height: 620px;
+                padding: 15px;
+            }
+
+            .hero-title {
+                font-size: 22px;
+            }
+
+            .hero-title-highlight {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+                margin: 10px 0 20px 0;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 260px;
+                gap: 12px;
+            }
+
+            .btn-red, .btn-gold {
+                width: 100%;
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            /* 4. Services Grid for Mobile */
+            .services-grid {
+                grid-template-columns: 1fr; /* ఒకదాని కింద ఒకటి నీట్‌గా వస్తాయి */
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
