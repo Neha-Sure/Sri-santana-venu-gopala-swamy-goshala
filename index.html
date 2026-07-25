@@ -221,16 +221,107 @@
             line-height: 1.5;
         }
 
-        /* =========================================================
-           📱 MOBILE & TABLET RESPONSIVE STYLES (ప్రత్యేకంగా మొబైల్ కోసం)
-        ========================================================= */
+        /* 5. Location & Social Links Section (కొత్తగా చేర్చబడినవి) */
+        .location-social-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-container {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .map-box {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid #E5C384;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .social-box {
+            flex: 1;
+            min-width: 300px;
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #E5C384;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .social-box h3 {
+            color: #630505;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .social-box p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: #ffffff;
+            transition: transform 0.2s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .facebook-btn {
+            background-color: #1877F2;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #630505;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        /* 📱 MOBILE & TABLET RESPONSIVE STYLES */
         @media (max-width: 768px) {
-            /* 1. Header adjustment */
             .top-header h1 {
                 font-size: 15px;
             }
 
-            /* 2. Menu links layout for Mobile */
             .navbar {
                 flex-direction: column;
                 padding: 10px;
@@ -252,7 +343,6 @@
                 padding: 6px 14px;
             }
 
-            /* 3. Hero Section Height & Text for Mobile */
             .hero-section {
                 height: 100vh;
                 min-height: 620px;
@@ -285,13 +375,16 @@
                 font-size: 15px;
             }
 
-            /* 4. Services Grid for Mobile */
             .services-grid {
-                grid-template-columns: 1fr; /* ఒకదాని కింద ఒకటి నీట్‌గా వస్తాయి */
+                grid-template-columns: 1fr;
             }
 
             .section-title {
                 font-size: 24px;
+            }
+
+            .location-container {
+                flex-direction: column;
             }
         }
     </style>
@@ -312,8 +405,8 @@
             <li><a href="#">గోశాల</a></li>
             <li><a href="#">గ్యాలరీ</a></li>
             <li><a href="#">విరాళాలు</a></li>
-            <li><a href="#">దేవాలయ స్థానం</a></li>
-            <li><a href="#">సంప్రదించండి</a></li>
+            <li><a href="#location">దేవాలయ స్థానం</a></li>
+            <li><a href="#social">సంప్రదించండి</a></li>
         </ul>
         <a href="#" class="donate-nav-btn">🙏 విరాళం ఇవ్వండి</a>
     </nav>
@@ -325,7 +418,7 @@
         <p class="hero-subtitle">భక్తి • సేవ • గోరక్షణ • ధర్మం</p>
 
         <div class="hero-buttons">
-            <a href="#" class="btn-red">🛕 దేవాలయ స్థానం</a>
+            <a href="#location" class="btn-red">🛕 దేవాలయ స్థానం</a>
             <a href="#" class="btn-gold">🤝 విరాళం ఇవ్వండి</a>
         </div>
     </section>
@@ -362,6 +455,47 @@
             </div>
         </div>
     </section>
+
+    <!-- Location & Social Media Section -->
+    <section class="location-social-section" id="location">
+        <div class="section-title">
+            <span>📍</span> దేవాలయ స్థానం & సోషల్ మీడియా <span>📲</span>
+        </div>
+
+        <div class="location-container">
+            <!-- Google Map -->
+            <div class="map-box">
+                <iframe 
+                    src="https://maps.app.goo.gl/medb3CEjQe5HwYSe7?g_st=aw" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Social Links Box -->
+            <div class="social-box" id="social">
+                <h3>మాతో కనెక్ట్ అవ్వండి</h3>
+                <p>దేవాలయం మరియు గోశాల విశేషాలు, పూజా వివరాలు తెలుసుకోవడానికి మా సోషల్ మీడియా ఖాతాలను ఫాలో అవ్వండి.</p>
+
+                <div class="social-buttons">
+                    <!-- Facebook Link -->
+                    <a href="https://www.facebook.com/share/1JHcS9saya/" target="_blank" class="social-btn facebook-btn">
+                        📘 Facebook పేజీ ని ఫాలో అవ్వండి
+                    </a>
+
+                    <!-- WhatsApp Channel Link -->
+                    <a href="https://whatsapp.com/channel/0029VbBv8se8V0tjPgH6na0T" target="_blank" class="social-btn whatsapp-btn">
+                        💬 WhatsApp ఛానెల్‌లో చేరండి
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల. సర్వేజనా సుఖినోభవంతు.</p>
+    </footer>
 
 </body>
 </html>
