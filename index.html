@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల</title>
+    
+    <!-- Google Telugu Font for Clear Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Noto Sans Telugu', sans-serif; /* Applied Telugu Font */
         }
 
         body {
@@ -31,13 +37,8 @@
         }
 
         .top-header h1 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .header-icon {
-            font-size: 24px;
         }
 
         /* 2. Navigation Bar */
@@ -47,7 +48,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 40px;
+            padding: 0 30px;
         }
 
         .nav-links {
@@ -58,7 +59,7 @@
 
         .nav-links li a {
             display: block;
-            padding: 14px 20px;
+            padding: 14px 18px;
             text-decoration: none;
             color: #333333;
             font-weight: 700;
@@ -78,41 +79,38 @@
         .donate-nav-btn {
             background-color: #E5A93C;
             color: #000;
-            padding: 8px 18px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            white-space: nowrap;
         }
 
-        /* 3. Hero Section with Background Image */
-        .hero-section {
-            position: relative;
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            min-height: 480px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px;
+        /* Hero Section with Background Image */
+.hero-section {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
+                url('image.png') center/cover no-repeat; /* ఇక్కడ మీ ఇమేజ్ పేరు ఇచ్చాం */
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
         }
 
         .hero-title {
-            font-size: 42px;
+            font-size: 38px;
             color: #FFFFFF;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-            font-weight: bold;
-            margin-bottom: 5px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+            font-weight: 700;
         }
 
         .hero-title-highlight {
-            font-size: 52px;
+            font-size: 48px;
             color: #F8CB43;
             text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
             font-weight: 800;
@@ -124,8 +122,8 @@
             font-size: 20px;
             color: #ffffff;
             margin: 15px 0 25px 0;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-            letter-spacing: 1px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+            font-weight: 600;
         }
 
         .hero-buttons {
@@ -137,22 +135,22 @@
         .btn-red {
             background-color: #630505;
             color: #ffffff;
-            padding: 12px 26px;
+            padding: 10px 24px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 17px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
 
         .btn-gold {
             background-color: #E5A93C;
             color: #000000;
-            padding: 12px 26px;
+            padding: 10px 24px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 17px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
 
@@ -166,7 +164,7 @@
 
         .section-title {
             color: #630505;
-            font-size: 32px;
+            font-size: 30px;
             font-weight: bold;
             margin-bottom: 30px;
             display: flex;
@@ -182,15 +180,13 @@
         }
 
         @media (max-width: 900px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .navbar { flex-direction: column; padding: 10px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
         }
 
         @media (max-width: 600px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+            .services-grid { grid-template-columns: 1fr; }
         }
 
         .service-card {
@@ -203,8 +199,8 @@
         }
 
         .card-icon-container {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background-color: #630505;
             border-radius: 50%;
             display: flex;
@@ -212,7 +208,7 @@
             align-items: center;
             margin: 0 auto 15px auto;
             color: #ffffff;
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .gold-icon {
@@ -221,16 +217,16 @@
         }
 
         .service-card h3 {
-            font-size: 20px;
+            font-size: 19px;
             color: #222;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: bold;
         }
 
         .service-card p {
             font-size: 14px;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -238,7 +234,7 @@
 
     <!-- Red Header Bar -->
     <header class="top-header">
-        <span class="header-icon">🛕</span>
+        <span>🛕</span>
         <h1>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల 🐄</h1>
     </header>
 
@@ -275,28 +271,24 @@
         </div>
 
         <div class="services-grid">
-            <!-- Card 1 -->
             <div class="service-card">
                 <div class="card-icon-container">🛕</div>
                 <h3>దేవాలయ సేవ</h3>
                 <p>దైనందిన పూజలు, ఉత్సవాలు, ప్రత్యేక కార్యక్రమాలు నిర్వహించబడును.</p>
             </div>
 
-            <!-- Card 2 -->
             <div class="service-card">
                 <div class="card-icon-container">🐄</div>
                 <h3>గోశాల సేవ</h3>
                 <p>గోవుల సంరక్షణ, ఆహారం, వైద్యం మరియు ప్రేమతో సేవ.</p>
             </div>
 
-            <!-- Card 3 -->
             <div class="service-card">
                 <div class="card-icon-container">🤲</div>
                 <h3>అన్నదానం</h3>
                 <p>భక్తులకు అన్నదానం మరియు పేదలకు సహాయం.</p>
             </div>
 
-            <!-- Card 4 -->
             <div class="service-card">
                 <div class="card-icon-container gold-icon">👥</div>
                 <h3>సమాజ సేవ</h3>
