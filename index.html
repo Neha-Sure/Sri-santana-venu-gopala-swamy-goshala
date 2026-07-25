@@ -4,21 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FAF6EE;
+            color: #333;
+        }
+
+        /* 1. Red Header Banner */
+        .top-header {
+            background-color: #630505;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .top-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .header-icon {
+            font-size: 24px;
+        }
+
+        /* 2. Navigation Bar */
+        .navbar {
+            background-color: #EBD9B4;
+            border-bottom: 2px solid #D4BC8A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0 auto;
+        }
+
+        .nav-links li a {
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: #333333;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .nav-links li a.active {
+            background-color: #E5A93C;
+            color: #000;
+        }
+
+        .nav-links li a:hover {
+            background-color: #DC9B28;
+            color: #000;
+        }
+
+        .donate-nav-btn {
+            background-color: #E5A93C;
+            color: #000;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* 3. Hero Section with Background Image */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .hero-title-highlight {
+            font-size: 52px;
+            color: #F8CB43;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+            font-weight: 800;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 15px 0 25px 0;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+            letter-spacing: 1px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-red {
+            background-color: #630505;
+            color: #ffffff;
+            padding: 12px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .btn-gold {
+            background-color: #E5A93C;
+            color: #000000;
+            padding: 12px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        /* 4. Services Section */
+        .services-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #630505;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background-color: #FAF6EE;
+            border: 1px solid #E5C384;
+            border-radius: 12px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .card-icon-container {
+            width: 70px;
+            height: 70px;
+            background-color: #630505;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px auto;
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        .gold-icon {
+            background-color: #E5A93C;
+            color: #000;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Red Header Bar -->
     <header class="top-header">
-        <div class="logo-title">
-            <span class="temple-icon">🛕</span>
-            <h1>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల 🐄</h1>
-        </div>
+        <span class="header-icon">🛕</span>
+        <h1>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల 🐄</h1>
     </header>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul>
+        <ul class="nav-links">
             <li><a href="#" class="active">హోమ్</a></li>
             <li><a href="#">మా గురించి</a></li>
             <li><a href="#">గోశాల</a></li>
@@ -26,53 +252,54 @@
             <li><a href="#">విరాళాలు</a></li>
             <li><a href="#">దేవాలయ స్థానం</a></li>
             <li><a href="#">సంప్రదించండి</a></li>
-            <li class="donate-nav-btn"><a href="#">🙏 విరాళం ఇవ్వండి</a></li>
         </ul>
+        <a href="#" class="donate-nav-btn">🙏 విరాళం ఇవ్వండి</a>
     </nav>
 
-    <!-- Hero / Banner Section -->
+    <!-- Main Hero Banner Section -->
     <section class="hero-section">
-        <div class="hero-overlay">
-            <h2>శ్రీ సంతాన వేణుగోపాల స్వామి వారి<br><span>దేవస్థానం మరియు గోశాల</span></h2>
-            <p class="tagline">భక్తి • సేవ • గోరక్షణ • ధర్మం</p>
+        <h2 class="hero-title">శ్రీ సంతాన వేణుగోపాల స్వామి వారి</h2>
+        <span class="hero-title-highlight">దేవస్థానం మరియు గోశాల</span>
+        <p class="hero-subtitle">భక్తి • సేవ • గోరక్షణ • ధర్మం</p>
 
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-red">🛕 దేవాలయ స్థానం</a>
-                <a href="#" class="btn btn-gold">🤝 విరాళం ఇవ్వండి</a>
-            </div>
+        <div class="hero-buttons">
+            <a href="#" class="btn-red">🛕 దేవాలయ స్థానం</a>
+            <a href="#" class="btn-gold">🤝 విరాళం ఇవ్వండి</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services-section">
-        <div class="section-heading">
-            <span class="ornament">🪔</span>
-            <h3>మా సేవలు</h3>
-            <span class="ornament">🪔</span>
+        <div class="section-title">
+            <span>✨</span> మా సేవలు <span>✨</span>
         </div>
 
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-icon">🛕</div>
-                <h4>దేవాలయ సేవ</h4>
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="card-icon-container">🛕</div>
+                <h3>దేవాలయ సేవ</h3>
                 <p>దైనందిన పూజలు, ఉత్సవాలు, ప్రత్యేక కార్యక్రమాలు నిర్వహించబడును.</p>
             </div>
 
-            <div class="card">
-                <div class="card-icon">🐄</div>
-                <h4>గోశాల సేవ</h4>
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="card-icon-container">🐄</div>
+                <h3>గోశాల సేవ</h3>
                 <p>గోవుల సంరక్షణ, ఆహారం, వైద్యం మరియు ప్రేమతో సేవ.</p>
             </div>
 
-            <div class="card">
-                <div class="card-icon">🤲</div>
-                <h4>అన్నదానం</h4>
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="card-icon-container">🤲</div>
+                <h3>అన్నదానం</h3>
                 <p>భక్తులకు అన్నదానం మరియు పేదలకు సహాయం.</p>
             </div>
 
-            <div class="card">
-                <div class="card-icon">👥</div>
-                <h4>సమాజ సేవ</h4>
+            <!-- Card 4 -->
+            <div class="service-card">
+                <div class="card-icon-container gold-icon">👥</div>
+                <h3>సమాజ సేవ</h3>
                 <p>విద్య, వైద్యం, పర్యావరణ పరిరక్షణ మరియు ఇతర సేవా కార్యక్రమాలు.</p>
             </div>
         </div>
