@@ -87,12 +87,13 @@
             white-space: nowrap;
         }
 
-        /* Hero Section with Background Image */
+       /* Hero Section with Full Image Fitting (No Excessive Zoom) */
 .hero-section {
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
-                url('image.png') center/cover no-repeat; /* ఇక్కడ మీ ఇమేజ్ పేరు ఇచ్చాం */
-    min-height: 480px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                url('image.png') center top / cover no-repeat;
+    height: 75vh; /* Height పెంచడం వల్ల Zoom తగ్గి, Full Photo కనిపిస్తుంది */
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +101,7 @@
     text-align: center;
     color: #ffffff;
     padding: 20px;
-        }
+} 
 
         .hero-title {
             font-size: 38px;
