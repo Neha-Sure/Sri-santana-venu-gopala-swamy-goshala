@@ -1,503 +1,245 @@
 <!DOCTYPE html>
 <html lang="te">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల</title>
-    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Google Telugu Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Noto Sans Telugu', sans-serif;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* Smooth scrolling for navbar clicks */
-        html {
-            scroll-behavior: smooth;
-        }
+    <!-- Font Awesome -->
 
-        body {
-            background-color: #FAF6EE;
-            color: #333;
-            overflow-x: hidden;
-        }
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        /* 1. Red Header Banner */
-        .top-header {
-            background-color: #630505;
-            color: #ffffff;
-            text-align: center;
-            padding: 12px 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .top-header h1 {
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        /* 2. Navigation Bar */
-        .navbar {
-            background-color: #EBD9B4;
-            border-bottom: 2px solid #D4BC8A;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0 auto;
-        }
-
-        .nav-links li a {
-            display: block;
-            padding: 14px 18px;
-            text-decoration: none;
-            color: #333333;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        .nav-links li a.active,
-        .nav-links li a:hover {
-            background-color: #E5A93C;
-            color: #000;
-        }
-
-        .donate-nav-btn {
-            background-color: #E5A93C;
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-            white-space: nowrap;
-        }
-
-        /* 3. Main Hero Banner Section */
-        .hero-section {
-            position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
-                        url('image.jpg') center top / cover no-repeat;
-            height: 85vh;
-            min-height: 550px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px;
-        }
-
-        .hero-title {
-            font-size: 38px;
-            color: #FFFFFF;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-            font-weight: 700;
-        }
-
-        .hero-title-highlight {
-            font-size: 48px;
-            color: #F8CB43;
-            text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
-            font-weight: 800;
-            display: block;
-            margin-top: 5px;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: #ffffff;
-            margin: 15px 0 25px 0;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
-            font-weight: 600;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .btn-red, .btn-gold {
-            padding: 12px 26px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 17px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        .btn-red {
-            background-color: #630505;
-            color: #ffffff;
-        }
-
-        .btn-gold {
-            background-color: #E5A93C;
-            color: #000000;
-        }
-
-        /* Common Section Layout */
-        .section-container {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            color: #630505;
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 30px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        /* 4. Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            background-color: #FFFFFF;
-            border: 1px solid #E5C384;
-            border-radius: 12px;
-            padding: 25px 15px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .card-icon-container {
-            width: 65px;
-            height: 65px;
-            background-color: #630505;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 15px auto;
-            color: #ffffff;
-            font-size: 28px;
-        }
-
-        .gold-icon {
-            background-color: #E5A93C;
-            color: #000;
-        }
-
-        .service-card h3 {
-            font-size: 19px;
-            color: #222;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        /* 5. Location Section */
-        .location-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            align-items: start;
-        }
-
-        .info-card {
-            background-color: #FFFFFF;
-            border: 1px solid #E5C384;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-
-        .info-card h3 {
-            color: #630505;
-            font-size: 20px;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #E5A93C;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
-
-        .info-card p, .info-card li {
-            font-size: 15px;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        .info-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .info-card ul li {
-            margin-bottom: 8px;
-        }
-
-        .map-box {
-            height: 420px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid #E5C384;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        /* 6. Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .social-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .social-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            color: #ffffff;
-            transition: transform 0.2s;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .facebook-btn { background-color: #1877F2; }
-        .whatsapp-btn { background-color: #25D366; }
-
-        /* Footer */
-        footer {
-            background-color: #630505;
-            color: #ffffff;
-            text-align: center;
-            padding: 18px;
-            font-size: 14px;
-            margin-top: 30px;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .top-header h1 { font-size: 15px; }
-
-            .navbar {
-                flex-direction: column;
-                padding: 10px;
-                gap: 8px;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .nav-links li a {
-                padding: 6px 10px;
-                font-size: 13px;
-            }
-
-            .hero-title { font-size: 22px; }
-            .hero-title-highlight { font-size: 28px; }
-            .hero-subtitle { font-size: 15px; }
-
-            .hero-buttons {
-                flex-direction: column;
-                width: 100%;
-                max-width: 260px;
-            }
-
-            .services-grid, .location-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .map-box { height: 300px; }
-        }
-    </style>
 </head>
+
 <body>
 
-    <!-- Header Bar -->
-    <header class="top-header">
-        <span>🛕</span>
-        <h1>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల 🐄</h1>
-    </header>
+<!-- ================= HEADER ================= -->
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#" class="active">హోమ్</a></li>
-            <li><a href="#about">మా గురించి</a></li>
-            <li><a href="#services">గోశాల & సేవలు</a></li>
-            <li><a href="#location">దేవాలయ స్థానం</a></li>
-            <li><a href="#contact">సంప్రదించండి</a></li>
-        </ul>
-        <a href="#donate" class="donate-nav-btn">🙏 విరాళం ఇవ్వండి</a>
-    </nav>
+<header>
 
-    <!-- Hero Banner Section -->
-    <section class="hero-section">
-        <h2 class="hero-title">శ్రీ సంతాన వేణుగోపాల స్వామి వారి</h2>
-        <span class="hero-title-highlight">దేవస్థానం మరియు గోశాల</span>
-        <p class="hero-subtitle">భక్తి • సేవ • గోరక్షణ • ధర్మం</p>
+<div class="top-header">
 
-        <div class="hero-buttons">
-            <a href="#location" class="btn-red">🛕 దేవాలయ స్థానం</a>
-            <a href="#donate" class="btn-gold">🤝 విరాళం ఇవ్వండి</a>
-        </div>
-    </section>
+<div class="logo">
 
-    <!-- Services Section -->
-    <section class="section-container" id="services">
-        <div class="section-title">
-            <span>✨</span> మా సేవలు <span>✨</span>
-        </div>
+<img src="images/logo.png" alt="Temple Logo">
 
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="card-icon-container">🛕</div>
-                <h3>దేవాలయ సేవ</h3>
-                <p>దైనందిన పూజలు, ఉత్సవాలు, ప్రత్యేక కార్యక్రమాలు నిర్వహించబడును.</p>
-            </div>
+</div>
 
-            <div class="service-card">
-                <div class="card-icon-container">🐄</div>
-                <h3>గోశాల సేవ</h3>
-                <p>గోవుల సంరక్షణ, ఆహారం, వైద్యం మరియు ప్రేమతో సేవ.</p>
-            </div>
+<div class="title">
 
-            <div class="service-card">
-                <div class="card-icon-container">🤲</div>
-                <h3>అన్నదానం</h3>
-                <p>భక్తులకు నిత్యాన్నదానం మరియు పేదలకు సహాయం.</p>
-            </div>
+<h1>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం</h1>
 
-            <div class="service-card">
-                <div class="card-icon-container gold-icon">👥</div>
-                <h3>సమాజ సేవ</h3>
-                <p>విద్య, వైద్యం, పర్యావరణ పరిరక్షణ మరియు ఇతర సేవా కార్యక్రమాలు.</p>
-            </div>
-        </div>
-    </section>
+<p>మరియు గోశాల</p>
 
-    <!-- 📍 1. దేవాలయ స్థానం (TEMPLE LOCATION SECTION) -->
-    <section class="section-container" id="location" style="background-color: #F3EBDD; border-radius: 12px;">
-        <div class="section-title">
-            <span>📍</span> దేవాలయ స్థానం వివరాలు <span>🛕</span>
-        </div>
+</div>
 
-        <div class="location-grid">
-            <!-- Address & Timings Box -->
-            <div>
-                <div class="info-card">
-                    <h3>📍 ఆలయ పూర్తి చిరునామా:</h3>
-                    <p>
-                        శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం,<br>
-                      పువ్వాడ గ్రామం,<br>
-                        నూజెండ్ల మండలం,పల్నాడు జిల్లా, ఆంధ్రప్రదేశ్  
-                        522660.
-                    </p>
-                </div>
+</div>
 
-                <div class="info-card">
-                    <h3>⏰ ఆలయ వేళలు (Timings):</h3>
-                    <ul>
-                        <li>☀️ <strong>ఉదయం:</strong> 06:00 AM నుండి 12:00 PM వరకు</li>
-                        <li>🌙 <strong>సాయంత్రం:</strong> 05:00 PM నుండి 08:30 PM వరకు</li>
-                    </ul>
-                </div>
+</header>
 
-                <div class="info-card">
-                    <h3>🚌 చేరుకునే మార్గాలు (How to Reach):</h3>
-                    <ul>
-                        <li>🚌 <strong>బస్సు మార్గం:</strong> దగ్గరలోని ఆర్టీసీ బస్టాండ్ నుండి ప్రతి 10 నిమిషాలకు ఆటో/బస్సు సౌకర్యం ఉంది.</li>
-                    </ul>
-                </div>
-            </div>
+<!-- ================= NAVBAR ================= -->
 
-            <!-- Google Map -->
-            <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.1675284766593!2d79.8593375!3d15.952625399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a93ef0db5458f%3A0xe7353d67d8e5a824!2z4LC24LGN4LCw4LGAIOCwuOCwguCwpOCwvuCwqCDgsLXgsYfgsKPgsYHgsJfgsYvgsKrgsL7gsLIg4LC44LGN4LC14LC-4LCu4LC_IOCwl-Cxi-CwtuCwvuCwsiAuLi4g4LCq4LGB4LC14LGN4LC14LC-4LChIOCwl-CxjeCwsOCwvuCwruCwgg!5e0!3m2!1sen!2sin!4v1784962108709!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
-        </div>
-    </section>
+<nav class="navbar">
 
-    <!-- 📞 2. సంప్రదించండి (CONTACT SECTION) -->
-    <section class="section-container" id="contact">
-        <div class="section-title">
-            <span>📞</span> మాతో సంప్రదించండి <span>💬</span>
-        </div>
+<div class="logo-small">
 
-        <div class="contact-grid">
-            <div class="info-card">
-                <h3>📞 ఫోన్ & ఇమెయిల్:</h3>
-                <ul>
-                    <li>📞 <strong>ఆలయ ఆఫీస్:</strong> +91 9959826390</li>
-                    <li>💬 <strong>వాట్సాప్ విచారణలు:</strong> +91 9959826390</li>
-                    <li>✉️ <strong>ఇమెయిల్:</strong>srisantanavenugopalaswamy@gmail.com </li>
-                </ul>
-            </div>
+<img src="images/logo.png" alt="logo">
 
-            <div class="info-card">
-                <h3>📲 సోషల్ మీడియా ద్వారా కనెక్ట్ అవ్వండి:</h3>
-                <p>ఆలయ విశేషాలు, పూజలు మరియు గోశాల సేవల తాజా అప్‌డేట్‌ల కోసం ఫాలో అవ్వండి:</p>
+</div>
 
-                <div class="social-buttons">
-                    <a href="https://www.facebook.com/share/1JHcS9saya/" target="_blank" class="social-btn facebook-btn">
-                        📘 Facebook పేజీ ని ఫాలో అవ్వండి
-                    </a>
-                    <a href="https://whatsapp.com/channel/0029VbBv8se8V0tjPgH6na0T" target="_blank" class="social-btn whatsapp-btn">
-                        💬 WhatsApp ఛానెల్‌లో చేరండి
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<ul>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల. సర్వేజనా సుఖినోభవంతు.</p>
-    </footer>
+<li><a href="#">హోమ్</a></li>
+
+<li><a href="#about">మా గురించి</a></li>
+
+<li><a href="#services">సేవలు</a></li>
+
+<li><a href="#gallery">గ్యాలరీ</a></li>
+
+<li><a href="#donation">విరాళాలు</a></li>
+
+<li><a href="#contact">సంప్రదించండి</a></li>
+
+</ul>
+
+<a href="#donation" class="donate-btn">🙏 విరాళం</a>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h2>శ్రీ సంతాన వేణుగోపాల స్వామి వారి</h2>
+
+<h1>దేవస్థానం మరియు గోశాల</h1>
+
+<p>
+
+భక్తి • సేవ • గోరక్షణ • ధర్మం
+
+</p>
+
+<div class="buttons">
+
+<a href="#about" class="btn">మా గురించి</a>
+
+<a href="#donation" class="btn2">విరాళం ఇవ్వండి</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<h2>మా గురించి</h2>
+
+<p>
+
+ఈ దేవస్థానం మరియు గోశాల భక్తులకు ఆధ్యాత్మిక సేవలు అందిస్తూ,
+
+గోరక్షణ మరియు అన్నదాన కార్యక్రమాలు నిర్వహిస్తోంది.
+
+</p>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<h2>మా సేవలు</h2>
+
+<div class="service-container">
+
+<div class="card">
+
+<i class="fa-solid fa-place-of-worship"></i>
+
+<h3>దేవాలయ సేవ</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-cow"></i>
+
+<h3>గోశాల సేవ</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-utensils"></i>
+
+<h3>అన్నదానం</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>సమాజ సేవ</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+<h2>ఫోటో గ్యాలరీ</h2>
+
+<div class="gallery">
+
+<img src="images/gallery1.jpg">
+
+<img src="images/gallery2.jpg">
+
+<img src="images/gallery3.jpg">
+
+</div>
+
+</section>
+
+<!-- ================= DONATION ================= -->
+
+<section id="donation">
+
+<h2>విరాళాలు</h2>
+
+<p>
+
+మీ విరాళం దేవాలయం మరియు గోశాల అభివృద్ధికి ఉపయోగపడుతుంది.
+
+</p>
+
+<img src="images/qr.png" alt="Donation QR">
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2>సంప్రదించండి</h2>
+
+<p>📞 +91 9959826390</p>
+
+<p>✉️ srisantanavenugopalaswamy@gmail.com</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
