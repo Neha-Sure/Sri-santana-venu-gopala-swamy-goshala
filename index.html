@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+acc<!DOCTYPE html>
 <html lang="te">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల</title>
     
-    <!-- Google Telugu Font for Clear Text -->
+    <!-- Google Telugu Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,12 +16,18 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Noto Sans Telugu', sans-serif; /* Applied Telugu Font */
+            font-family: 'Noto Sans Telugu', sans-serif;
+        }
+
+        /* Smooth scrolling for navbar clicks */
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: #FAF6EE;
             color: #333;
+            overflow-x: hidden;
         }
 
         /* 1. Red Header Banner */
@@ -49,6 +55,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav-links {
@@ -66,13 +75,9 @@
             font-size: 16px;
         }
 
-        .nav-links li a.active {
-            background-color: #E5A93C;
-            color: #000;
-        }
-
+        .nav-links li a.active,
         .nav-links li a:hover {
-            background-color: #DC9B28;
+            background-color: #E5A93C;
             color: #000;
         }
 
@@ -87,20 +92,22 @@
             white-space: nowrap;
         }
 
-      .hero-section {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                url('image.jpg') center top / cover no-repeat;
-    height: 120vh; /* ఎత్తుని 120% స్క్రీన్ ఎత్తుకు పెంచాం */
-    min-height: 900px; /* డెస్క్‌టాప్‌లో కూడా ఫోటో ఫుల్‌గా కనిపించడానికి */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 20px;
-}
+        /* 3. Main Hero Banner Section */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
+                        url('image.jpg') center top / cover no-repeat;
+            height: 85vh;
+            min-height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
         .hero-title {
             font-size: 38px;
             color: #FFFFFF;
@@ -131,34 +138,30 @@
             justify-content: center;
         }
 
-        .btn-red {
-            background-color: #630505;
-            color: #ffffff;
-            padding: 10px 24px;
+        .btn-red, .btn-gold {
+            padding: 12px 26px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             font-size: 17px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .btn-red {
+            background-color: #630505;
+            color: #ffffff;
         }
 
         .btn-gold {
             background-color: #E5A93C;
             color: #000000;
-            padding: 10px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 17px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
 
-        /* 4. Services Section */
-        .services-section {
-            padding: 40px 20px;
+        /* Common Section Layout */
+        .section-container {
+            padding: 50px 20px;
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .section-title {
@@ -166,35 +169,27 @@
             font-size: 30px;
             font-weight: bold;
             margin-bottom: 30px;
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
         }
 
+        /* 4. Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
 
-        @media (max-width: 900px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .navbar { flex-direction: column; padding: 10px; }
-            .nav-links { flex-wrap: wrap; justify-content: center; }
-        }
-
-        @media (max-width: 600px) {
-            .services-grid { grid-template-columns: 1fr; }
-        }
-
         .service-card {
-            background-color: #FAF6EE;
+            background-color: #FFFFFF;
             border: 1px solid #E5C384;
             border-radius: 12px;
             padding: 25px 15px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .card-icon-container {
@@ -227,11 +222,142 @@
             color: #555;
             line-height: 1.5;
         }
+
+        /* 5. Location Section */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .info-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E5C384;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            color: #630505;
+            font-size: 20px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #E5A93C;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .info-card p, .info-card li {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-card ul li {
+            margin-bottom: 8px;
+        }
+
+        .map-box {
+            height: 420px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #E5C384;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 6. Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: #ffffff;
+            transition: transform 0.2s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .facebook-btn { background-color: #1877F2; }
+        .whatsapp-btn { background-color: #25D366; }
+
+        /* Footer */
+        footer {
+            background-color: #630505;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .top-header h1 { font-size: 15px; }
+
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+                gap: 8px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links li a {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .hero-title { font-size: 22px; }
+            .hero-title-highlight { font-size: 28px; }
+            .hero-subtitle { font-size: 15px; }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 260px;
+            }
+
+            .services-grid, .location-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-box { height: 300px; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Red Header Bar -->
+    <!-- Header Bar -->
     <header class="top-header">
         <span>🛕</span>
         <h1>శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల 🐄</h1>
@@ -241,30 +367,28 @@
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="#" class="active">హోమ్</a></li>
-            <li><a href="#">మా గురించి</a></li>
-            <li><a href="#">గోశాల</a></li>
-            <li><a href="#">గ్యాలరీ</a></li>
-            <li><a href="#">విరాళాలు</a></li>
-            <li><a href="#">దేవాలయ స్థానం</a></li>
-            <li><a href="#">సంప్రదించండి</a></li>
+            <li><a href="#about">మా గురించి</a></li>
+            <li><a href="#services">గోశాల & సేవలు</a></li>
+            <li><a href="#location">దేవాలయ స్థానం</a></li>
+            <li><a href="#contact">సంప్రదించండి</a></li>
         </ul>
-        <a href="#" class="donate-nav-btn">🙏 విరాళం ఇవ్వండి</a>
+        <a href="#donate" class="donate-nav-btn">🙏 విరాళం ఇవ్వండి</a>
     </nav>
 
-    <!-- Main Hero Banner Section -->
+    <!-- Hero Banner Section -->
     <section class="hero-section">
         <h2 class="hero-title">శ్రీ సంతాన వేణుగోపాల స్వామి వారి</h2>
         <span class="hero-title-highlight">దేవస్థానం మరియు గోశాల</span>
         <p class="hero-subtitle">భక్తి • సేవ • గోరక్షణ • ధర్మం</p>
 
         <div class="hero-buttons">
-            <a href="#" class="btn-red">🛕 దేవాలయ స్థానం</a>
-            <a href="#" class="btn-gold">🤝 విరాళం ఇవ్వండి</a>
+            <a href="#location" class="btn-red">🛕 దేవాలయ స్థానం</a>
+            <a href="#donate" class="btn-gold">🤝 విరాళం ఇవ్వండి</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services-section">
+    <section class="section-container" id="services">
         <div class="section-title">
             <span>✨</span> మా సేవలు <span>✨</span>
         </div>
@@ -285,7 +409,7 @@
             <div class="service-card">
                 <div class="card-icon-container">🤲</div>
                 <h3>అన్నదానం</h3>
-                <p>భక్తులకు అన్నదానం మరియు పేదలకు సహాయం.</p>
+                <p>భక్తులకు నిత్యాన్నదానం మరియు పేదలకు సహాయం.</p>
             </div>
 
             <div class="service-card">
@@ -296,5 +420,85 @@
         </div>
     </section>
 
+    <!-- 📍 1. దేవాలయ స్థానం (TEMPLE LOCATION SECTION) -->
+    <section class="section-container" id="location" style="background-color: #F3EBDD; border-radius: 12px;">
+        <div class="section-title">
+            <span>📍</span> దేవాలయ స్థానం వివరాలు <span>🛕</span>
+        </div>
+
+        <div class="location-grid">
+            <!-- Address & Timings Box -->
+            <div>
+                <div class="info-card">
+                    <h3>📍 ఆలయ పూర్తి చిరునామా:</h3>
+                    <p>
+                        శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం,<br>
+                      పువ్వాడ గ్రామం,<br>
+                        నూజెండ్ల మండలం,పల్నాడు జిల్లా, ఆంధ్రప్రదేశ్  
+                        522660.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>⏰ ఆలయ వేళలు (Timings):</h3>
+                    <ul>
+                        <li>☀️ <strong>ఉదయం:</strong> 06:00 AM నుండి 12:00 PM వరకు</li>
+                        <li>🌙 <strong>సాయంత్రం:</strong> 05:00 PM నుండి 08:30 PM వరకు</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🚌 చేరుకునే మార్గాలు (How to Reach):</h3>
+                    <ul>
+                        <li>🚌 <strong>బస్సు మార్గం:</strong> దగ్గరలోని ఆర్టీసీ బస్టాండ్ నుండి ప్రతి 10 నిమిషాలకు ఆటో/బస్సు సౌకర్యం ఉంది.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.1675284766593!2d79.8593375!3d15.952625399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a93ef0db5458f%3A0xe7353d67d8e5a824!2z4LC24LGN4LCw4LGAIOCwuOCwguCwpOCwvuCwqCDgsLXgsYfgsKPgsYHgsJfgsYvgsKrgsL7gsLIg4LC44LGN4LC14LC-4LCu4LC_IOCwl-Cxi-CwtuCwvuCwsiAuLi4g4LCq4LGB4LC14LGN4LC14LC-4LChIOCwl-CxjeCwsOCwvuCwruCwgg!5e0!3m2!1sen!2sin!4v1784962108709!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📞 2. సంప్రదించండి (CONTACT SECTION) -->
+    <section class="section-container" id="contact">
+        <div class="section-title">
+            <span>📞</span> మాతో సంప్రదించండి <span>💬</span>
+        </div>
+
+        <div class="contact-grid">
+            <div class="info-card">
+                <h3>📞 ఫోన్ & ఇమెయిల్:</h3>
+                <ul>
+                    <li>📞 <strong>ఆలయ ఆఫీస్:</strong> +91 9959826390</li>
+                    <li>💬 <strong>వాట్సాప్ విచారణలు:</strong> +91 9959826390</li>
+                    <li>✉️ <strong>ఇమెయిల్:</strong>srisantanavenugopalaswamy@gmail.com </li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>📲 సోషల్ మీడియా ద్వారా కనెక్ట్ అవ్వండి:</h3>
+                <p>ఆలయ విశేషాలు, పూజలు మరియు గోశాల సేవల తాజా అప్‌డేట్‌ల కోసం ఫాలో అవ్వండి:</p>
+
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/share/1JHcS9saya/" target="_blank" class="social-btn facebook-btn">
+                        📘 Facebook పేజీ ని ఫాలో అవ్వండి
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VbBv8se8V0tjPgH6na0T" target="_blank" class="social-btn whatsapp-btn">
+                        💬 WhatsApp ఛానెల్‌లో చేరండి
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 శ్రీ సంతాన వేణుగోపాల స్వామి వారి దేవస్థానం మరియు గోశాల. సర్వేజనా సుఖినోభవంతు.</p>
+    </footer>
+
 </body>
 </html>
+actually this is my code to image complete where i should need to change
